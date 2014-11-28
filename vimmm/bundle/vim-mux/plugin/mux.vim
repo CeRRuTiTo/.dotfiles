@@ -52,18 +52,13 @@ function! s:initialize(session)
 endfunction
 
 function! s:send(command)
-  if !s:initialized
-    echohl WarningMsg | echo 'Mux: Not initialized yet. Run `:Mux session-name` to initialize.' | echohl None
-    return
-  end
-
   echo a:command
 
-  call system("tmux send-keys -t " . s:session . ":mux.1 C-l C-u " . a:command)
-endfunction
-
-function! s:runCommand(command)
-  call s:send(shellescape(a:command) . " C-m")
+  if !s:initialized
+    exec ':!clear && ' . a:command
+  else
+    call system("tmux send-keys -t " . s:session . ":mux.1 C-l C-u " . shellescape(a:command) . " C-m")
+  end
 endfunction
 
 let s:modes = {}
@@ -74,24 +69,17 @@ let s:modes.cucumber.file = '"bundle exec cucumber " . expand("%") . " --drb"'
 let s:modes.cucumber.line = '"bundle exec cucumber " . expand("%") . ":" . line(".") . " --drb"'
 let s:modes.cucumber.all = '"bundle exec cucumber --drb"'
 
-" Turnip does not support to run a test line
-let s:modes.turnip = {}
-let s:modes.turnip.matcher = '^spec/.*\.feature$'
-let s:modes.turnip.file = '"bundle exec rspec " . expand("%") . " --drb"'
-let s:modes.turnip.line = s:modes.turnip.file
-let s:modes.turnip.all = '"bundle exec rspec"'
-
 let s:modes.rspec = {}
 let s:modes.rspec.matcher = '_spec\.rb$'
 let s:modes.rspec.file = '"bundle exec rspec --format nested " . expand("%") . " --drb"'
 let s:modes.rspec.line = '"bundle exec rspec --format nested " . expand("%") . " --line " . line(".") . " --drb"'
 let s:modes.rspec.all = '"bundle exec rspec . --drb"'
 
-let s:modes.mocha = {}
-let s:modes.mocha.matcher = '\.test\.js$'
-let s:modes.mocha.file = '"./node_modules/.bin/mocha " . expand("%") . ""'
-let s:modes.mocha.line = '"./node_modules/.bin/mocha " . expand("%") . ""'
-let s:modes.mocha.all = '"./node_modules/.bin/mocha"'
+let s:modes.hydro = {}
+let s:modes.hydro.matcher = '^test\/.*\.js$'
+let s:modes.hydro.file = '"NODE_ENV=test ./node_modules/.bin/hydro --harmony " . expand("%") . ""'
+let s:modes.hydro.line = '"NODE_ENV=test ./node_modules/.bin/hydro --harmony " . expand("%") . ""'
+let s:modes.hydro.all = '"NODE_ENV=test ./node_modules/.bin/hydro --harmony"'
 
 let s:modes.python = {}
 let s:modes.python.matcher = 'test_.*\.py$'
@@ -110,20 +98,19 @@ function! s:run(type)
   endfor
 
   if has_key(commands, a:type)
-    let command = shellescape(eval(commands[a:type])) . " C-m"
+    let command = eval(commands[a:type])
     let g:lastCommand = command
     call s:send(command)
   elseif exists("g:lastCommand")
     call s:send(g:lastCommand)
   else
     echohl ErrorMsg | echo "Mux: I have not idea how to handle that." | echohl None
-    return
   end
 endfunction
 
 command! -bang -nargs=1 Mux call s:initialize(<q-args>)
 command! -bang -nargs=1 MuxSend call s:send(<q-args>)
-command! -bang -nargs=1 MuxRun call s:runCommand(<q-args>)
+command! -bang -nargs=1 MuxRun call s:send(<q-args>)
 
 noremap <expr> <Plug>MuxRunFile <SID>run('file')
 noremap <expr> <Plug>MuxRunLine <SID>run('line')

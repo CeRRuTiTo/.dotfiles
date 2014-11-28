@@ -84,6 +84,9 @@ alias tic='titanium clean'
 # Corona SDK
 alias corona="/Applications/CoronaSDK/Corona\ Terminal; exit;"
 
+# Google Chrome
+alias ogc='open -a Google\ Chrome --args --disable-web-security'
+
 # tmux
-alias cmux="tmux new -n mux -s "
-alias kmux="tmux kill-session"
+#alias cmux="tmux new -n mux -s "
+#alias kmux="tmux kill-session"

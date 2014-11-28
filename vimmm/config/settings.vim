@@ -64,12 +64,12 @@ set listchars=""
 " Make command line two lines high
 set ch=2
 
+" This makes RVM work
+set shell=bash
+
 " When the page starts to scroll, keep the cursor 8 lines from the top and 8
 " lines from the bottom
 set scrolloff=8
-
-" A tab should display as " \"
-set listchars=tab:\ \
 
 " Show trailing spaces as dots
 set listchars+=trail:.
@@ -91,6 +91,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Ignore bundler and sass cache
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 
+" Ignore node & component related stuff
+set wildignore+=node_modules,components,bundle,coverage
+
 " Ignore temp and backup files
 set wildignore+=*.swp,*~,._*
 
@@ -110,7 +113,7 @@ set nobackup nowritebackup noswapfile
 set completeopt=menu
 
 " Complete options. See complete-items.
-set complete=.,w,b,k
+set complete=.,w
 
 " Disable inserting two spaces
 set nojoinspaces
@@ -127,9 +130,8 @@ set wildmenu
 " Extra extensions for "gf"
 set suffixesadd+=.js
 
-" List all matches, complete till longest common string, complete the next
-" full match
-set wildmode=list:full
+" List all matches, complete till longest common string
+set wildmode=longest,list
 
 " Disable visual error flash and error beeps
 set visualbell t_vb=
@@ -137,5 +139,17 @@ set visualbell t_vb=
 " Disable folding
 set nofoldenable
 
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Terminal options
+set t_Co=256
+
+" Status line
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
+" Jellybeans background: black
+let g:jellybeans_background_color_256=16
+
 " Colors
-colors ir_black
+colors jellybeans

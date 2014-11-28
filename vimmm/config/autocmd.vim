@@ -14,19 +14,22 @@ au FileType php setlocal softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 au FileType markdown setlocal textwidth=80
 
 " Python
-au FileType python set sw=4 sts=4 et
+au FileType python setlocal sw=4 sts=4 et
 
 " Hard code tabs in Makefiles
 au FileType make setlocal noexpandtab
 
-" CakePHP -> PHP
-au BufEnter *.ctp set filetype=php
-
 " JSON -> JavaScript
-au BufEnter *.json set filetype=javascript
+au BufEnter *.json setlocal filetype=javascript
+
+" ejs -> HTML
+au BufEnter *.ejs setlocal filetype=html
 
 " TSS -> CSS
-au BufEnter *.tss set filetype=css
+au BufEnter *.tss setlocal filetype=css
 
-" Spell checking
-au FileType cucumber,markdown,gitcommit set spell
+" Enable spell checking when writing a commit message
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
+" Enable spell checking when writing a note
+au FileType notes setlocal spell
