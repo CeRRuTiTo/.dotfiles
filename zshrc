@@ -9,6 +9,4 @@
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export PATH=${PATH}:/Users/dimitar_v/Resources/adt-bundle-mac/sdk/platform-tools:/Users/dimitar_v/Resources/adt-bundle-mac/sdk/tools
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
