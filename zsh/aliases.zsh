@@ -87,6 +87,8 @@ alias corona="/Applications/CoronaSDK/Corona\ Terminal; exit;"
 # Google Chrome
 alias ogc='open -a Google\ Chrome --args --disable-web-security'
 
+alias awsmb="aws s3 ls s3://tint --recursive  | grep -v -E '(Bucket: |Prefix: |LastWriteTime|^$|--)' | awk 'BEGIN {total=0}{total+=\$3}END{print total/1024/1024\" MB\"}'"
+
 # tmux
 #alias cmux="tmux new -n mux -s "
 #alias kmux="tmux kill-session"
