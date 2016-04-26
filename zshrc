@@ -17,5 +17,12 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export NVM_DIR="/Users/dimitar/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
+
+export PATH="$HOME/.node/bin:$PATH"
+
+#https://gist.github.com/DanHerbert/9520689 - NPM problems
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
