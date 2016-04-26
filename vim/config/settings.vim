@@ -138,4 +138,4 @@ set visualbell t_vb=
 set nofoldenable
 
 " Colors
-" colors ir_black
+colors dimitar
