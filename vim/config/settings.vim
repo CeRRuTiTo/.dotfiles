@@ -137,5 +137,7 @@ set visualbell t_vb=
 " Disable folding
 set nofoldenable
 
+let g:solarized_termcolors=256
+
 " Colors
 colors dimitar

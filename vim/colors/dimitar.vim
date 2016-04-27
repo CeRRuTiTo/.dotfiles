@@ -23,42 +23,6 @@ if exists("syntax_on")
     syntax reset
 endif
 
-
-" Alduin Shouts:
-"----------------------------------------------------------------
-
-" Default:
-let g:colors_name="alduin"
-
-
-" Aura Whisper:
-" Change the MatchParen HL to Underlined
-if !exists( "g:alduin_Shout_Aura_Whisper") " {{{
-    let g:alduin_Shout_Aura_Whisper = 0
-endif " }}}
-
-
-" Fire Breath:
-" Change the Special HL foreground color to Sahloknir
-if !exists( "g:alduin_Shout_Fire_Breath" ) " {{{
-    let g:alduin_Shout_Fire_Breath = 0
-endif " }}}
-
-
-" Become Ethereal:
-" Changes the Default Alduin to a Darker Version
-if !exists( "g:alduin_Shout_Become_Ethereal" ) " {{{
-    let g:alduin_Shout_Become_Ethereal = 0
-endif " }}}
-
-
-" Contract Vampirism:
-" Automatically changes the Alduin to Ethereal after 5pm
-if !exists( "g:alduin_Contract_Vampirism") " {{{
-    let g:alduin_Contract_Vampirism = 0
-endif " }}}
-
-
 " Colors:
 "----------------------------------------------------------------
 let s:alduin = {}
@@ -91,18 +55,19 @@ let s:alduin.Rorikstead  = [ '3a3a3a', 237 ]
 let s:alduin.Nightingale = [ '585858', 240 ]
 let s:alduin.Ivory       = [ 'eeeeee', 255 ]
 
-let s:alduin.White       = [ 'eeeeee', 255 ]
-let s:alduin.Black       = [ '000000', 16  ]
-let s:alduin.DarkestGray = [ '3a3a3a', 234 ]
-let s:alduin.DarkGray    = [ '3a3a3a', 239 ]
-let s:alduin.Gray        = [ '3a3a3a', 241 ]
-let s:alduin.Red         = [ 'CD6A50', 167 ]
-let s:alduin.Yellow      = [ 'CD6A50', 222 ]
+let s:alduin.White        = [ 'eeeeee', 255 ]
+let s:alduin.Black        = [ '000000', 16  ]
+let s:alduin.DarkestGray  = [ '3a3a3a', 234 ]
+let s:alduin.DarkGray     = [ '3a3a3a', 239 ]
+let s:alduin.Gray         = [ '3a3a3a', 241 ]
+let s:alduin.Red          = [ 'CD6A50', 167 ]
+let s:alduin.Yellow       = [ 'CD6A50', 222 ]
 "let s:alduin.BrownYellow = [ 'CD6A50', 179 ]
-let s:alduin.BrownYellow = [ 'CD6A50', 137 ]
-let s:alduin.Brown       = [ 'CD6A50', 137 ]
-let s:alduin.Green       = [ 'CD6A50', 107 ]
-let s:alduin.BrightYellow = [ 'CD6A50', 185 ]
+let s:alduin.BrownYellow  = [ 'CD6A50', 137 ]
+let s:alduin.Brown        = [ 'CD6A50', 137 ]
+let s:alduin.Green        = [ 'CD6A50', 107 ]
+let s:alduin.BrightYellow = [ 'CD6A50', 221 ]
+let s:alduin.Orange       = [ 'CD6A50', 172 ]
 
 
 function! s:HL(group, fg, ...)
@@ -162,8 +127,6 @@ call s:HL( 'LineNr', 'Gray', 'Black','none' )
 call s:HL( 'FoldColumn', 'Mirmulnir', 'Skyrim', '' )
 call s:HL( 'Folded', 'Rorikstead', 'Solitude', 'none' )
 call s:HL( 'SignColumn', 'Winterhold', 'Solitude','none' )
-"TODO
-"call s:HL( 'CursorColumn', '', '', '' )
 
 
 " WindowTab Delimiters:
@@ -172,8 +135,6 @@ call s:HL( 'VertSplit', 'White', 'DarkGray', 'none' )
 call s:HL( 'TabLine', 'Winterhold', 'Solitude', 'none' )
 call s:HL( 'TabLineFill', 'Winterhold', 'Solitude', 'none' )
 call s:HL( 'TabLineSel', 'Solitude', 'Winterhold', 'none' )
-"TODO
-"call s:HL( 'ColorColumn', '', '', '' )
 
 
 " File Navigation:
@@ -197,7 +158,7 @@ call s:HL( 'Question', 'Durnehviir', '', '' )
 " Visual Aid:
 "--------------------------------------------------------------------------------
 call s:HL( 'MatchParen', 'BrightYellow', 'DarkestGray', 'none' )
-call s:HL( 'Visual', 'Black', 'Yellow', 'none' )
+call s:HL( 'Visual', 'Black', 'BrightYellow', 'none' )
 call s:HL( 'VisualNOS', '', '', 'underline' )
 call s:HL( 'NonText', 'Winterhold', '', 'none' )
 call s:HL( 'Todo', 'DarkGray', 'Black', 'italic' )
@@ -206,8 +167,6 @@ call s:HL( 'Error', 'Red', 'Black', 'reverse' )
 call s:HL( 'ErrorMsg', 'Red', 'Black', 'reverse' )
 call s:HL( 'WarningMsg', 'Red', '', 'none' )
 call s:HL( 'SpecialKey', 'Mirmulnir', '', '' )
-"TODO
-"call s:HL( 'Ignore', '', '', '' )
 
 
 " Variable Types:
@@ -220,8 +179,6 @@ call s:HL( 'Boolean', 'Red', '', 'none' )
 call s:HL( 'Float', 'Red', '', 'none' )
 call s:HL( 'Identifier', 'BrightYellow', '', 'none' )
 call s:HL( 'Function', 'Brown', '', 'none' )
-"TODO
-"call s:HL( 'StringDelimiter', '', '', '' )
 
 
 " Language Constructs:
@@ -236,12 +193,6 @@ call s:HL( 'Exception', 'Brown', '', 'none' )
 call s:HL( 'Comment', 'DarkGray', '', 'none' )
 call s:HL( 'SpecialComment', 'DarkGray', 'Solitude', 'reverse' )
 call s:HL( 'Special', 'White', '', 'none' )
-"TODO
-"call s:HL( 'SpecialChar', '', '', '' )
-"call s:HL( 'Tag', '', '', '' )
-"call s:HL( 'SpecialComment', '', '', '' )
-"call s:HL( 'Delimiter', '', '', '' )
-"call s:HL( 'Debug', '', '', '' )
 
 
 " C Like:
@@ -266,8 +217,9 @@ call s:HL( 'javaScriptDocTags', 'Red', '', 'none' )
 call s:HL( 'javaScriptFunc', 'Red', '', 'none' )
 call s:HL( 'javaScriptLabel', 'White', '', 'none' )
 call s:HL( 'javaScriptType', 'Red', '', 'none' )
+call s:HL( 'javaScriptSource', 'Red', 'Red', 'none' )
 
-" Ruby
+" Ruby:
 " ------------------------------------------------------------------
 call s:HL( 'rubyGlobalVariable', 'Red', '', 'none' )
 
@@ -276,14 +228,6 @@ call s:HL( 'rubyGlobalVariable', 'Red', '', 'none' )
 "--------------------------------------------------------------------
 call s:HL( 'htmlArg', 'Durnehviir', '', 'none' )
 call s:HL( 'htmlItalic', 'Sahrotaar', '', 'none' )
-
-
-" Diff:
-"--------------------------------------------------------------------
-"call s:HL( 'DiffAdd', 'Ivarstead', 'Dawnstar', 'none' )
-"call s:HL( 'DiffChange', 'Ivarstead', 'Morthal', 'none' )
-"call s:HL( 'DiffDelete', 'Ivarstead', 'Windhelm', 'none' )
-"call s:HL( 'DiffText', 'Ivarstead', 'Falkreath', 'none' )
 
 
 " Completion Menu:
@@ -297,48 +241,3 @@ call s:HL( 'PmenuThumb', '', 'Whiterun', '' )
 " Spelling:
 "--------------------------------------------------------------------
 call s:HL( 'SpellBad', 'Windhelm', '', 'undercurl' )
-"TODO
-"call s:HL( 'SpellCap', '', '', '' )
-"call s:HL( 'SpellLocal', '', '', '' )
-"call s:HL( 'SpellRare', '', '', '' )
-
-
-" Aura Whisper:
-"--------------------------------------------------------------------
-"if g:alduin_Shout_Aura_Whisper
-    "call s:HL( 'MatchParen', 'Ivory', 'Skyrim', 'underline' )
-"end
-
-
-" Fire Breath:
-"if g:alduin_Shout_Fire_Breath
-    "call s:HL( 'Special', 'Sahloknir', '', 'none' )
-    "call s:HL( 'Title', 'Windhelm', '', 'none' )
-"end
-
-
-" Become Ethereal:
-"--------------------------------------------------------------------
-"if g:alduin_Shout_Become_Ethereal
-    "call s:HL( 'Normal', 'Whiterun', 'Oblivion', 'none' )
-    "call s:HL( 'LineNr', 'Riften', 'Abyss','none' )
-    "call s:HL( 'String', 'Paarthurnax', 'Solitude', 'none' )
-    "call s:HL( 'CursorLine', '', 'Solitude', 'none' )
-    "call s:HL( 'TabLineFill', 'Winterhold', 'Abyss', 'none' )
-    "call s:HL( 'TabLine', 'Winterhold', 'Abyss', 'none' )
-    "call s:HL( 'VertSplit', 'Winterhold', 'Solitude', 'none' )
-    "call s:HL( 'FoldColumn', 'Mirmulnir', 'Oblivion', '' )
-    "call s:HL( 'SignColumn', 'Winterhold', 'Abyss','none' )
-"end
-
-
-" Contract Vampirism:
-"--------------------------------------------------------------------
-"if g:alduin_Contract_Vampirism
-    "let alduin_Hour = strftime("%H")
-    "if 7 <= alduin_Hour && alduin_Hour < 17
-        "let g:alduin_Shout_Become_Ethereal = 0
-    "else
-        "let g:alduin_Shout_Become_Ethereal = 1
-    "endif
-"end
