@@ -11,6 +11,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 set nocompatible
+set ttyfast
+set lazyredraw
 set backspace=2
 
 " Pathogen

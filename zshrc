@@ -8,7 +8,7 @@
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/Users/dimitar/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/Users/dimitar/.rvm/bin
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -26,3 +26,6 @@ export PATH="$HOME/.node/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Unbind <C-s> as XON/XOFF terminal flow
+stty -ixon -ixoff

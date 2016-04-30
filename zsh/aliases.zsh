@@ -93,6 +93,9 @@ alias awsmb="aws s3 ls s3://tint --recursive  | grep -v -E '(Bucket: |Prefix: |L
 
 alias rs="rails s -b 0.0.0.0"
 
+alias git="hub"
+
 # tmux
-#alias cmux="tmux new -n mux -s "
-#alias kmux="tmux kill-session"
+alias tx="tmuxinator"
+alias cmux="tmux new -n mux -s "
+alias kmux="tmux kill-session"
