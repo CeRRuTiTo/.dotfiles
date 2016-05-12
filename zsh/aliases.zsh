@@ -73,7 +73,7 @@ alias cov="npm run-script coverage"
 alias node='node --harmony'
 
 # Vim
-alias vi="vim"
+#alias vi="vim"
 alias iv="vim"
 
 # Titanium
