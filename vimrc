@@ -15,6 +15,8 @@ set ttyfast
 set lazyredraw
 set backspace=2
 
+set clipboard=unnamed
+
 " Pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -46,3 +48,40 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+if has("autocmd")
+  au FileType html setlocal syntax=mustache
+endif
+
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
+
+let g:jsx_ext_required = 0
+
+let g:javascript_plugin_flow = 1
+let g:flow#autoclose = 1
+let g:syntastic_javascript_checkers = ['flow']
+let g:syntastic_javascript_flow_exe = 'flow'
+
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_loc_list_height = 5
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 1
+"let g:syntastic_javascript_checkers = ['eslint']
+
+"let g:syntastic_error_symbol = '❌'
+"let g:syntastic_style_error_symbol = '⁉️'
+"let g:syntastic_warning_symbol = '⚠️'
+"let g:syntastic_style_warning_symbol = '💩'
+
+"highlight link SyntasticErrorSign SignColumn
+"highlight link SyntasticWarningSign SignColumn
+"highlight link SyntasticStyleErrorSign SignColumn
+"highlight link SyntasticStyleWarningSign SignColumn

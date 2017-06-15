@@ -28,5 +28,8 @@ au BufEnter *.json set filetype=javascript
 " TSS -> CSS
 au BufEnter *.tss set filetype=css
 
+" Handlebard handling
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
+
 " Spell checking
-au FileType cucumber,markdown,gitcommit set spell
+" au FileType cucumber,markdown,gitcommit set spell

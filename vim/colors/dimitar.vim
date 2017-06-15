@@ -241,3 +241,8 @@ call s:HL( 'PmenuThumb', '', 'Whiterun', '' )
 " Spelling:
 "--------------------------------------------------------------------
 call s:HL( 'SpellBad', 'Windhelm', '', 'undercurl' )
+
+hi Tag              guifg=#CD6A50  guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
+hi xmlTag           guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
+hi xmlTagName       guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
+hi xmlEndTag        guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE

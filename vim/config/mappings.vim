@@ -78,3 +78,12 @@ nmap m <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+"nmap <silent> <leader>t :TestNearest<CR>
+"nmap <silent> <leader>T :TestFile<CR>
+"nmap <silent> <leader>a :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
+"let test#javascript#mocha#file_pattern = 'specs\.jsx'
+"let test#javascript#mocha#executable = 'mocha'
+"let test#filename_modifier = ':p'

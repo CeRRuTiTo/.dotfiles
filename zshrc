@@ -21,11 +21,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #source $(brew --prefix nvm)/nvm.sh
 
 export PATH="$HOME/.node/bin:$PATH"
+export PATH=~/.yarn/bin:$PATH
 
 #https://gist.github.com/DanHerbert/9520689 - NPM problems
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Unbind <C-s> as XON/XOFF terminal flow
 stty -ixon -ixoff
@@ -34,18 +32,5 @@ plugins+=(zsh-completions)
 autoload -U compinit && compinit
 
 export NVM_DIR="$HOME/.dotfiles/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-#source /usr/local/opt/nvm/nvm.sh
-
-#autoload -U add-zsh-hook
-#load-nvmrc() {
-  #if [[ -f .nvmrc && -r .nvmrc ]]; then
-    #nvm use
-  #elif [[ $(nvm version) != $(nvm version default)  ]]; then
-    #echo "Reverting to nvm default version"
-    #nvm use default
-  #fi
-#}
-#add-zsh-hook chpwd load-nvmrc
-#load-nvmrc
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
