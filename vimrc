@@ -63,6 +63,15 @@ let g:javascript_plugin_flow = 1
 let g:flow#autoclose = 1
 let g:syntastic_javascript_checkers = ['flow']
 let g:syntastic_javascript_flow_exe = 'flow'
+let g:flow#enable = 0
+
+"let g:typescript_indent_disable = 1
+setlocal indentkeys+=0
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 " Syntastic
 "set statusline+=%#warningmsg#

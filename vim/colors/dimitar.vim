@@ -242,6 +242,16 @@ call s:HL( 'PmenuThumb', '', 'Whiterun', '' )
 "--------------------------------------------------------------------
 call s:HL( 'SpellBad', 'Windhelm', '', 'undercurl' )
 
+" YCM Highlighting:
+"--------------------------------------------------------------------
+call s:HL( 'YcmErrorSign', 'Red', '', 'undercurl' )
+call s:HL( 'YcmWarningSign', 'Red', '', 'undercurl' )
+call s:HL( 'YcmErrorLine', 'Red', '', 'undercurl' )
+call s:HL( 'YcmWarningLine', 'Red', '', 'undercurl' )
+call s:HL( 'YcmErrorSection', 'White', 'Red', 'none' )
+call s:HL( 'YcmWarningSection', 'White', 'Red', 'none' )
+
+
 hi Tag              guifg=#CD6A50  guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
 hi xmlTag           guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
 hi xmlTagName       guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE

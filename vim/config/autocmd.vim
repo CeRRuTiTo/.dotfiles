@@ -33,3 +33,6 @@ au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
 " Spell checking
 " au FileType cucumber,markdown,gitcommit set spell
+
+" Typescript
+autocmd FileType typescript set shiftwidth=2 tabstop=2 expandtab
