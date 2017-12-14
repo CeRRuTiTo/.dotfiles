@@ -79,6 +79,8 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+:imap jj <Esc>
+
 "nmap <silent> <leader>t :TestNearest<CR>
 "nmap <silent> <leader>T :TestFile<CR>
 "nmap <silent> <leader>a :TestSuite<CR>

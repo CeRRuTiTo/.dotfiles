@@ -29,5 +29,6 @@ default = tracking
 [core]
 excludesfile = /Users/dimitar_v/.gitignore_global
 trustctime = false
+	editor = /usr/bin/vim
 [branch]
 autosetuprebase = always
