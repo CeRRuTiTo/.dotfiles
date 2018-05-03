@@ -7,6 +7,11 @@
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+export ZSH=/Users/dvalchanov/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 #export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/Users/dvalchanov/.rvm/bin:/Users/dvalchanov/Library/Python/3.6/bin
 
@@ -27,6 +32,13 @@ export PATH=~/.yarn/bin:$PATH
 export VISUAL=nvim
 export VIMCONFIG=~/.config/nvim
 export VIMDATA=~/.local/share/nvim
+
+# When using FZF only use files listed by RipGrep
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export CLICOLOR=1
+export TERM=xterm-256color
 
 #https://gist.github.com/DanHerbert/9520689 - NPM problems
 

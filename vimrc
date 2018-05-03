@@ -18,10 +18,8 @@ set backspace=2
 set clipboard=unnamed
 
 " Pathogen
-filetype off
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
-filetype plugin on
+"filetype off
+"filetype plugin on
 
 " Include the hot stuff
 runtime config/settings.vim
@@ -58,8 +56,8 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'passive_filetypes': ['html'] }
 
 let g:jsx_ext_required = 0
+"let g:javascript_plugin_flow = 1
 
-let g:javascript_plugin_flow = 1
 let g:flow#autoclose = 1
 let g:syntastic_javascript_checkers = ['flow']
 let g:syntastic_javascript_flow_exe = 'flow'
@@ -72,6 +70,34 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+" Initialize minpac package manager
+packadd minpac
+call minpac#init()
+
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('junegunn/fzf')
+call minpac#add('tpope/vim-projectionist')
+
+
+"call minpac#add('sheerun/vim-polyglot')
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('mxw/vim-jsx')
+call minpac#add('isruslan/vim-es6')
+call minpac#add('jelera/vim-javascript-syntax')
+call minpac#add('w0rp/ale')
+call minpac#add('elzr/vim-json')
+
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+
+" Create convenient minpac commands for updating and cleaning plugins
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+" Launch Fuzzy Finder with Ctrl-P
+nnoremap <C-p> :<C-u>FZF<CR>
 
 " Syntastic
 "set statusline+=%#warningmsg#

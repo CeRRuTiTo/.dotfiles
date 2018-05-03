@@ -1,8 +1,11 @@
 " Switch on syntax highlighting
-syntax on
+syntax enable
 
 " Indent
 filetype indent on
+
+" Enable filetype detection
+filetype plugin indent on
 
 " Don't show the current command in the lower right corner
 set showcmd
@@ -137,7 +140,11 @@ set visualbell t_vb=
 " Disable folding
 set nofoldenable
 
+"set t_Co=256
+"syntax enable
+"let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
+"set background=dark
 
 " Colors
-colors dimitar
+colorscheme dimitar

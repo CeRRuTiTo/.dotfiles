@@ -4,9 +4,6 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 
-" Colors
-colors dimitar
-
 " Turn off blinking in normal mode
 set gcr=n:blinkon0
 

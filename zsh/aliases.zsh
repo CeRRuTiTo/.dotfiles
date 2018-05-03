@@ -73,7 +73,7 @@ alias cov="npm run-script coverage"
 alias node='node --harmony'
 
 # Vim
-#alias vi="vim"
+alias vi="nvim"
 alias iv="vim"
 
 # Titanium
@@ -92,8 +92,6 @@ alias agc='open -a Google\ Chrome --args --allow-file-access-from-files'
 alias awsmb="aws s3 ls s3://tint --recursive  | grep -v -E '(Bucket: |Prefix: |LastWriteTime|^$|--)' | awk 'BEGIN {total=0}{total+=\$3}END{print total/1024/1024\" MB\"}'"
 
 alias rs="rails s -b 0.0.0.0"
-
-alias git="hub"
 
 # tmux
 alias tx="tmuxinator"

@@ -57,17 +57,18 @@ let s:alduin.Ivory       = [ 'eeeeee', 255 ]
 
 let s:alduin.White        = [ 'eeeeee', 255 ]
 let s:alduin.Black        = [ '000000', 16  ]
+let s:alduin.Blue         = [ '87afff', 111  ]
 let s:alduin.DarkestGray  = [ '3a3a3a', 234 ]
 let s:alduin.DarkGray     = [ '3a3a3a', 239 ]
 let s:alduin.Gray         = [ '3a3a3a', 241 ]
-let s:alduin.Red          = [ 'CD6A50', 167 ]
-let s:alduin.Yellow       = [ 'CD6A50', 222 ]
-"let s:alduin.BrownYellow = [ 'CD6A50', 179 ]
-let s:alduin.BrownYellow  = [ 'CD6A50', 137 ]
-let s:alduin.Brown        = [ 'CD6A50', 137 ]
-let s:alduin.Green        = [ 'CD6A50', 107 ]
-let s:alduin.BrightYellow = [ 'CD6A50', 221 ]
+let s:alduin.Red          = [ 'd75f5f', 167 ]
+let s:alduin.Yellow       = [ 'CD6A50', 223 ]
+let s:alduin.BrownYellow  = [ 'af875f', 137 ]
+let s:alduin.Brown        = [ 'af8700', 137 ]
+let s:alduin.Green        = [ '87af5f', 107 ]
+let s:alduin.BrightYellow = [ 'ffd75f', 221 ] " this / var / const / let
 let s:alduin.Orange       = [ 'CD6A50', 172 ]
+let s:alduin.LightCyan    = [ 'afd7d7', 152 ]
 
 
 function! s:HL(group, fg, ...)
@@ -211,13 +212,17 @@ call s:HL( 'Typedef', 'Viinturuth', '', 'none' )
 " ------------------------------------------------------------------
 call s:HL( 'javaScriptFunction', 'Brown', '', 'none' )
 call s:HL( 'javaScriptBraces', 'BrownYellow', '', 'none' )
+call s:HL( 'javaScriptIdentifier', 'BrightYellow', '', 'none' )
 call s:HL( 'javaScriptBoolean', 'Red', '', 'none' )
 call s:HL( 'javaScriptNull', 'Red', '', 'none' )
 call s:HL( 'javaScriptDocTags', 'Red', '', 'none' )
 call s:HL( 'javaScriptFunc', 'Red', '', 'none' )
 call s:HL( 'javaScriptLabel', 'White', '', 'none' )
 call s:HL( 'javaScriptType', 'Red', '', 'none' )
-call s:HL( 'javaScriptSource', 'Red', 'Red', 'none' )
+call s:HL( 'javaScriptSource', 'BrownYellow', '', 'none' )
+call s:HL( 'javaScriptReserved', 'BrownYellow', '', 'none' )
+call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' )
+
 
 " Ruby:
 " ------------------------------------------------------------------
