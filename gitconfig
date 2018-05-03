@@ -27,7 +27,7 @@ prompt = false
 [push]
 default = tracking
 [core]
-excludesfile = /Users/dimitar_v/.gitignore_global
+	excludesfile = /Users/dvalchanov/.gitignore_global
 trustctime = false
 	editor = /usr/bin/vim
 [branch]
