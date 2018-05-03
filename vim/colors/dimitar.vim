@@ -239,6 +239,9 @@ call s:HL( 'rubyGlobalVariable', 'Red', '', 'none' )
 "--------------------------------------------------------------------
 call s:HL( 'htmlArg', 'Durnehviir', '', 'none' )
 call s:HL( 'htmlItalic', 'Sahrotaar', '', 'none' )
+call s:HL( 'htmlTag', 'BrownYellow', '', 'none' )
+call s:HL( 'htmlEndTag', 'BrownYellow', '', 'none' )
+call s:HL( 'htmlTagName', 'BrownYellow', '', 'none' )
 
 
 " Completion Menu:

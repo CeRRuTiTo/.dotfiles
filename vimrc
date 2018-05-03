@@ -91,7 +91,6 @@ call minpac#add('w0rp/ale')
 call minpac#add('elzr/vim-json')
 call minpac#add('cakebaker/scss-syntax.vim')
 call minpac#add('hail2u/vim-css3-syntax')
-call minpac#add('othree/html5.vim')
 
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
