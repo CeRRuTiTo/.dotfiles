@@ -148,3 +148,4 @@ let g:solarized_termcolors=256
 
 " Colors
 colorscheme dimitar
+"colorscheme monokai

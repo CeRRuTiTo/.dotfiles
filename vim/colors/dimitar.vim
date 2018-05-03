@@ -57,7 +57,7 @@ let s:alduin.Ivory       = [ 'eeeeee', 255 ]
 
 let s:alduin.White        = [ 'eeeeee', 255 ]
 let s:alduin.Black        = [ '000000', 16  ]
-let s:alduin.Blue         = [ '87afff', 111  ]
+let s:alduin.Blue         = [ '87afff', 110 ]
 let s:alduin.DarkestGray  = [ '3a3a3a', 234 ]
 let s:alduin.DarkGray     = [ '3a3a3a', 239 ]
 let s:alduin.Gray         = [ '3a3a3a', 241 ]
@@ -66,7 +66,7 @@ let s:alduin.Yellow       = [ 'CD6A50', 223 ]
 let s:alduin.BrownYellow  = [ 'af875f', 137 ]
 let s:alduin.Brown        = [ 'af8700', 137 ]
 let s:alduin.Green        = [ '87af5f', 107 ]
-let s:alduin.BrightYellow = [ 'ffd75f', 221 ] " this / var / const / let
+let s:alduin.BrightYellow = [ 'ffd75f', 221 ]
 let s:alduin.Orange       = [ 'CD6A50', 172 ]
 let s:alduin.LightCyan    = [ 'afd7d7', 152 ]
 
@@ -178,7 +178,7 @@ call s:HL( 'Character', 'Odahviing', '', 'none' )
 call s:HL( 'Number', 'Red', '', 'none' )
 call s:HL( 'Boolean', 'Red', '', 'none' )
 call s:HL( 'Float', 'Red', '', 'none' )
-call s:HL( 'Identifier', 'BrightYellow', '', 'none' )
+call s:HL( 'Identifier', 'Blue', '', 'none' )
 call s:HL( 'Function', 'Brown', '', 'none' )
 
 
@@ -203,7 +203,7 @@ call s:HL( 'Include', 'Sahrotaar', '', 'none' )
 call s:HL( 'Define', 'Sahrotaar', '', 'none' )
 call s:HL( 'Macro', 'Sahrotaar', '', 'none' )
 call s:HL( 'PreCondit', 'Sahrotaar', '', 'none' )
-call s:HL( 'Type', 'Viinturuth', '', 'none' )
+call s:HL( 'Type', 'Paarthurnax', '', 'none' )
 call s:HL( 'StorageClass', 'Viinturuth', '', 'none' )
 call s:HL( 'Structure', 'Viinturuth', '', 'none' )
 call s:HL( 'Typedef', 'Viinturuth', '', 'none' )
@@ -212,8 +212,8 @@ call s:HL( 'Typedef', 'Viinturuth', '', 'none' )
 " ------------------------------------------------------------------
 call s:HL( 'javaScriptFunction', 'Brown', '', 'none' )
 call s:HL( 'javaScriptBraces', 'BrownYellow', '', 'none' )
-call s:HL( 'javaScriptIdentifier', 'BrightYellow', '', 'none' )
-call s:HL( 'javaScriptBoolean', 'Red', '', 'none' )
+call s:HL( 'javaScriptFuncDef', 'White', '', 'none' )
+call s:HL( 'javaScriptIdentifier', 'Blue', '', 'none' )
 call s:HL( 'javaScriptNull', 'Red', '', 'none' )
 call s:HL( 'javaScriptDocTags', 'Red', '', 'none' )
 call s:HL( 'javaScriptFunc', 'Red', '', 'none' )
@@ -221,7 +221,13 @@ call s:HL( 'javaScriptLabel', 'White', '', 'none' )
 call s:HL( 'javaScriptType', 'Red', '', 'none' )
 call s:HL( 'javaScriptSource', 'BrownYellow', '', 'none' )
 call s:HL( 'javaScriptReserved', 'BrownYellow', '', 'none' )
-call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' )
+call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' ) " BrownYellow
+call s:HL( 'javaScriptBoolean', 'Red', '', 'none' )
+call s:HL( 'javaScriptObjectKey', 'LightCyan', '', 'none' ) " White
+call s:HL( 'javaScriptBrowserObjects', 'BrightYellow', '', 'none' ) " White
+call s:HL( 'javaScriptDOMObjects', 'BrightYellow', '', 'none' ) " White
+call s:HL( 'javaScriptDOMMethods', 'White', '', 'none' ) " White
+call s:HL( 'javaScriptDOMProperties', 'White', '', 'none' ) " White
 
 
 " Ruby:
@@ -256,8 +262,7 @@ call s:HL( 'YcmWarningLine', 'Red', '', 'undercurl' )
 call s:HL( 'YcmErrorSection', 'White', 'Red', 'none' )
 call s:HL( 'YcmWarningSection', 'White', 'Red', 'none' )
 
-
-hi Tag              guifg=#CD6A50  guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
-hi xmlTag           guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
-hi xmlTagName       guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
-hi xmlEndTag        guifg=#CD6A50   guibg=NONE      guisp=NONE      gui=NONE        ctermfg=222 ctermbg=NONE    cterm=NONE
+call s:HL('Tag', 'Blue', '', 'none')
+call s:HL('xmlTag', 'Blue', '', 'none')
+call s:HL('xmlTagName', 'Blue', '', 'none')
+call s:HL('xmlEndTag', 'Blue', '', 'none')

@@ -84,10 +84,14 @@ call minpac#add('tpope/vim-projectionist')
 "call minpac#add('sheerun/vim-polyglot')
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mxw/vim-jsx')
+"call minpac#add('chemzqm/vim-jsx-improve')
 call minpac#add('isruslan/vim-es6')
 call minpac#add('jelera/vim-javascript-syntax')
 call minpac#add('w0rp/ale')
 call minpac#add('elzr/vim-json')
+call minpac#add('cakebaker/scss-syntax.vim')
+call minpac#add('hail2u/vim-css3-syntax')
+call minpac#add('othree/html5.vim')
 
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
