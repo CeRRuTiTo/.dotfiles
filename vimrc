@@ -19,8 +19,8 @@ set clipboard=unnamed
 
 " Pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 filetype plugin on
 
 " Include the hot stuff

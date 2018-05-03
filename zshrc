@@ -8,7 +8,7 @@
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/Users/dimitar/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/Users/dvalchanov/.rvm/bin:/Users/dvalchanov/Library/Python/3.6/bin
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -22,6 +22,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH="$HOME/.node/bin:$PATH"
 export PATH=~/.yarn/bin:$PATH
+
+# Use Neovim as "preferred editor"
+export VISUAL=nvim
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim
 
 #https://gist.github.com/DanHerbert/9520689 - NPM problems
 
