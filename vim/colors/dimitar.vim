@@ -211,23 +211,26 @@ call s:HL( 'Typedef', 'Viinturuth', '', 'none' )
 " JavaScript:
 " ------------------------------------------------------------------
 call s:HL( 'javaScriptFunction', 'Brown', '', 'none' )
-call s:HL( 'javaScriptBraces', 'BrownYellow', '', 'none' )
 call s:HL( 'javaScriptFuncDef', 'White', '', 'none' )
+call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' ) " BrownYellow
+call s:HL( 'javaScriptBraces', 'BrownYellow', '', 'none' )
 call s:HL( 'javaScriptIdentifier', 'Blue', '', 'none' )
 call s:HL( 'javaScriptNull', 'Red', '', 'none' )
 call s:HL( 'javaScriptDocTags', 'Red', '', 'none' )
-call s:HL( 'javaScriptFunc', 'Red', '', 'none' )
 call s:HL( 'javaScriptLabel', 'White', '', 'none' )
 call s:HL( 'javaScriptType', 'Red', '', 'none' )
 call s:HL( 'javaScriptSource', 'BrownYellow', '', 'none' )
 call s:HL( 'javaScriptReserved', 'BrownYellow', '', 'none' )
-call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' ) " BrownYellow
+call s:HL( 'javaScriptStatement', 'BrightYellow', '', 'none' )
 call s:HL( 'javaScriptBoolean', 'Red', '', 'none' )
 call s:HL( 'javaScriptObjectKey', 'LightCyan', '', 'none' ) " White
 call s:HL( 'javaScriptBrowserObjects', 'BrightYellow', '', 'none' ) " White
-call s:HL( 'javaScriptDOMObjects', 'BrightYellow', '', 'none' ) " White
+call s:HL( 'javaScriptDOMObjects', 'White', '', 'none' ) " White
 call s:HL( 'javaScriptDOMMethods', 'White', '', 'none' ) " White
 call s:HL( 'javaScriptDOMProperties', 'White', '', 'none' ) " White
+call s:HL( 'javaScriptHtmlEvents', 'White', '', 'none' ) " White
+call s:HL( 'javaScriptHtmlElemProperties', 'White', '', 'none' ) " White
+call s:HL( 'javaScriptHtmlElemAttrs', 'White', '', 'none' ) " White
 
 
 " Ruby:
@@ -265,7 +268,7 @@ call s:HL( 'YcmWarningLine', 'Red', '', 'undercurl' )
 call s:HL( 'YcmErrorSection', 'White', 'Red', 'none' )
 call s:HL( 'YcmWarningSection', 'White', 'Red', 'none' )
 
-call s:HL('Tag', 'Blue', '', 'none')
-call s:HL('xmlTag', 'Blue', '', 'none')
-call s:HL('xmlTagName', 'Blue', '', 'none')
-call s:HL('xmlEndTag', 'Blue', '', 'none')
+call s:HL('Tag', 'BrownYellow', '', 'none')
+call s:HL('xmlTag', 'BrownYellow', '', 'none')
+call s:HL('xmlTagName', 'BrownYellow', '', 'none')
+call s:HL('xmlEndTag', 'BrownYellow', '', 'none')
