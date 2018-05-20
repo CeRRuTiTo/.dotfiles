@@ -214,6 +214,7 @@ call s:HL( 'javaScriptFunction', 'Brown', '', 'none' )
 call s:HL( 'javaScriptFuncDef', 'White', '', 'none' )
 call s:HL( 'javaScriptFuncKeyword', 'BrownYellow', '', 'none' ) " BrownYellow
 call s:HL( 'javaScriptBraces', 'BrownYellow', '', 'none' )
+call s:HL( 'javaScriptDeprecated', 'White', '', 'none' )
 call s:HL( 'javaScriptIdentifier', 'Blue', '', 'none' )
 call s:HL( 'javaScriptNull', 'Red', '', 'none' )
 call s:HL( 'javaScriptDocTags', 'Red', '', 'none' )
